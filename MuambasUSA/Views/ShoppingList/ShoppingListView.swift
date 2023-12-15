@@ -36,7 +36,7 @@ struct ShoppingListView: View {
             .navigationDestination(for: NavigationType.self) { type in
                 switch type {
                 case .form:
-                    ShoppingFormView()
+                    ShoppingFormView(path: $path)
                 }
             }
             .toolbar {

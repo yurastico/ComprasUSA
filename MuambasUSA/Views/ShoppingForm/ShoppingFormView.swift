@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 struct ShoppingFormView: View {
+    @Binding var path: NavigationPath
     @State private var productName = ""
     @State private var stateTax = 0.0
     @State private var productPrice = 0.0
@@ -37,11 +38,21 @@ struct ShoppingFormView: View {
                 }
                
             }
+            
         }
         .navigationTitle("Cadastro de produto")
+        
+        Button {
+            path.removeLast()
+        } label: {
+            Text("Cadastrar")
+                .frame(maxWidth: .infinity,maxHeight: 30)
+        }
+        .buttonStyle(.borderedProminent)
+        .padding()
     }
 }
 
 #Preview {
-    ShoppingFormView()
+    ShoppingFormView(path: .constant(.init()))
 }
