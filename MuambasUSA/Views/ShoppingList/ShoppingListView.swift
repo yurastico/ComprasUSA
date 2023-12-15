@@ -7,10 +7,15 @@
 
 import SwiftUI
 
+enum NavigationType: Hashable {
+    case form
+}
+
 struct ShoppingListView: View {
     let shoppingItems = [String]()
+    @State private var path = NavigationPath()
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             Group {
                 if shoppingItems.isEmpty {
                     Text("Sua lista de compras está vazia")
@@ -27,17 +32,24 @@ struct ShoppingListView: View {
                     }
                 }
             }
-        }
-        .navigationTitle("Lista de compras")
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    
-                } label: {
-                    Image(systemName: "plus")
+            .navigationTitle("Lista de compras")
+            .navigationDestination(for: NavigationType.self) { type in
+                switch type {
+                case .form:
+                    ShoppingFormView()
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        path.append(NavigationType.form)
+                    } label: {
+                        Image(systemName: "plus")
+                    }
                 }
             }
         }
+        
     }
     private func deleteItem(at offsets: IndexSet) {
         print(#function)
