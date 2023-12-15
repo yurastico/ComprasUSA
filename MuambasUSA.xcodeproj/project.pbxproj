@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		C5233D952B2C246B00130218 /* MuambasUSAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233D942B2C246B00130218 /* MuambasUSAApp.swift */; };
-		C5233D972B2C246B00130218 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233D962B2C246B00130218 /* ContentView.swift */; };
+		C5233D972B2C246B00130218 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233D962B2C246B00130218 /* MainTabView.swift */; };
 		C5233D992B2C246D00130218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5233D982B2C246D00130218 /* Assets.xcassets */; };
 		C5233D9C2B2C246D00130218 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5233D9B2B2C246D00130218 /* Preview Assets.xcassets */; };
+		C5233DA52B2C2C4400130218 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233DA42B2C2C4400130218 /* ShoppingListView.swift */; };
+		C5233DA72B2C2C5E00130218 /* ShoppingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233DA62B2C2C5E00130218 /* ShoppingFormView.swift */; };
+		C5233DAE2B2C37C100130218 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233DAD2B2C37C100130218 /* SettingsView.swift */; };
+		C5233DB12B2C3D9300130218 /* TotalPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233DB02B2C3D9300130218 /* TotalPurchaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C5233D912B2C246B00130218 /* MuambasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuambasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5233D942B2C246B00130218 /* MuambasUSAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuambasUSAApp.swift; sourceTree = "<group>"; };
-		C5233D962B2C246B00130218 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C5233D962B2C246B00130218 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C5233D982B2C246D00130218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5233D9B2B2C246D00130218 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C5233DA42B2C2C4400130218 /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
+		C5233DA62B2C2C5E00130218 /* ShoppingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingFormView.swift; sourceTree = "<group>"; };
+		C5233DAD2B2C37C100130218 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C5233DB02B2C3D9300130218 /* TotalPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPurchaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,10 @@
 		C5233D932B2C246B00130218 /* MuambasUSA */ = {
 			isa = PBXGroup;
 			children = (
-				C5233D942B2C246B00130218 /* MuambasUSAApp.swift */,
-				C5233D962B2C246B00130218 /* ContentView.swift */,
-				C5233D982B2C246D00130218 /* Assets.xcassets */,
+				C5233DA32B2C2BC900130218 /* App */,
+				C5233DA22B2C2BC200130218 /* Views */,
 				C5233D9A2B2C246D00130218 /* Preview Content */,
+				C5233D982B2C246D00130218 /* Assets.xcassets */,
 			);
 			path = MuambasUSA;
 			sourceTree = "<group>";
@@ -65,6 +73,66 @@
 				C5233D9B2B2C246D00130218 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C5233DA22B2C2BC200130218 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5233DA82B2C374A00130218 /* MainTab */,
+				C5233DAA2B2C377100130218 /* ShoppingList */,
+				C5233DAB2B2C37B300130218 /* Settings */,
+				C5233DA92B2C375E00130218 /* ShoppingForm */,
+				C5233DAF2B2C3CEB00130218 /* totalPurchase */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5233DA32B2C2BC900130218 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C5233D942B2C246B00130218 /* MuambasUSAApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C5233DA82B2C374A00130218 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				C5233D962B2C246B00130218 /* MainTabView.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		C5233DA92B2C375E00130218 /* ShoppingForm */ = {
+			isa = PBXGroup;
+			children = (
+				C5233DA62B2C2C5E00130218 /* ShoppingFormView.swift */,
+			);
+			path = ShoppingForm;
+			sourceTree = "<group>";
+		};
+		C5233DAA2B2C377100130218 /* ShoppingList */ = {
+			isa = PBXGroup;
+			children = (
+				C5233DA42B2C2C4400130218 /* ShoppingListView.swift */,
+			);
+			path = ShoppingList;
+			sourceTree = "<group>";
+		};
+		C5233DAB2B2C37B300130218 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C5233DAD2B2C37C100130218 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C5233DAF2B2C3CEB00130218 /* totalPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				C5233DB02B2C3D9300130218 /* TotalPurchaseView.swift */,
+			);
+			path = totalPurchase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5233D972B2C246B00130218 /* ContentView.swift in Sources */,
+				C5233DAE2B2C37C100130218 /* SettingsView.swift in Sources */,
+				C5233DA72B2C2C5E00130218 /* ShoppingFormView.swift in Sources */,
+				C5233DB12B2C3D9300130218 /* TotalPurchaseView.swift in Sources */,
+				C5233DA52B2C2C4400130218 /* ShoppingListView.swift in Sources */,
+				C5233D972B2C246B00130218 /* MainTabView.swift in Sources */,
 				C5233D952B2C246B00130218 /* MuambasUSAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,8 +350,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurastico.MuambasUSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,8 +382,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +391,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurastico.MuambasUSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
