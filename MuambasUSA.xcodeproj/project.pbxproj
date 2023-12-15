@@ -82,7 +82,7 @@
 				C5233DAA2B2C377100130218 /* ShoppingList */,
 				C5233DA92B2C375E00130218 /* ShoppingForm */,
 				C5233DAB2B2C37B300130218 /* Settings */,
-				C5233DAF2B2C3CEB00130218 /* totalPurchase */,
+				C5233DAF2B2C3CEB00130218 /* TotalPurchase */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,12 +127,12 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		C5233DAF2B2C3CEB00130218 /* totalPurchase */ = {
+		C5233DAF2B2C3CEB00130218 /* TotalPurchase */ = {
 			isa = PBXGroup;
 			children = (
 				C5233DB02B2C3D9300130218 /* TotalPurchaseView.swift */,
 			);
-			path = totalPurchase;
+			path = TotalPurchase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
