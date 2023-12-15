@@ -9,7 +9,19 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        Text("Hello world")
+        TabView {
+            ShoppingListView()
+                .tabItem {
+                    Label("Compras", systemImage: "cart.circle")
+                }
+            SettingsView()
+                .tabItem { Label("Ajustes",systemImage: "gear.circle") }
+            TotalPurchaseView()
+                .tabItem {
+                    Label("Total da compra",systemImage: "dollarsign.circle")
+                }
+            
+        }
     }
 }
 
