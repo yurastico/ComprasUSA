@@ -1,7 +1,7 @@
 # MuambasUSA
-## MuambasUSA é o melhor jeito para voce ter controle de suas compras nos Estados Unidos
+## MuambasUSA é o melhor jeito para voce ter controle de suas compras nos Estados Unidos!
 
-### Tenha ocntrole das suas compras da melhor forma!
+### Tenha cntrole das suas compras da melhor forma!
 
 * Cotação do dólar em tempo real
 * Cálculo de IOF
