@@ -12,7 +12,7 @@ struct ShoppingFormView: View {
     @State private var productName = ""
     @State private var stateTax = 0.0
     @State private var productPrice = 0.0
-    @State private var isCreditCar = false
+    @State private var isCreditCard = false
     @State private var prouctImage: PhotosPickerItem? = nil
     var body: some View {
         Form {
@@ -29,7 +29,7 @@ struct ShoppingFormView: View {
             }
             
             Section("MEIO DE PAGAMENTO") {
-                Toggle("Pagou com cartão?", isOn: $isCreditCar)
+                Toggle("Pagou com cartão?", isOn: $isCreditCard)
             }
             
             Section("FOTO") {
@@ -43,6 +43,7 @@ struct ShoppingFormView: View {
         .navigationTitle("Cadastro de produto")
         
         Button {
+            var item = ShoppingItem(name: productName, taxState: stateTax, price: productPrice, isCreditCard: isCreditCard, image: Data())
             path.removeLast()
         } label: {
             Text("Cadastrar")
