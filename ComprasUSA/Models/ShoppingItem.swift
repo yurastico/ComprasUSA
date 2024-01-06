@@ -11,13 +11,13 @@ import SwiftData
 @Model
 final class ShoppingItem: Identifiable {
     let id = UUID()
-    let name: String
-    let taxState: Double
-    let price: Double
-    let isCreditCard: Bool
-    let image: Data
+    var name: String
+    var taxState: Double
+    var price: Double
+    var isCreditCard: Bool
+    var image: Data?
     
-    init(name: String, taxState: Double, price: Double, isCreditCard: Bool, image: Data) {
+    init(name: String = "", taxState: Double = 0.0, price: Double = 0.0, isCreditCard: Bool = false, image: Data? = nil) {
         self.name = name
         self.taxState = taxState
         self.price = price

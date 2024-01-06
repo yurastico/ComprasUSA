@@ -10,29 +10,32 @@ import PhotosUI
 struct ShoppingFormView: View {
     @Binding var path: NavigationPath
     @Environment(\.modelContext) var modelContext
-    @State private var productName = ""
-    @State private var stateTax = 0.0
-    @State private var productPrice = 0.0
-    @State private var isCreditCard = false
+    @Bindable var product: ShoppingItem
     @State private var selectedProductImage: PhotosPickerItem?
     @State private var productImageData: Data?
+    
+    init(product: ShoppingItem? = nil,path: Binding<NavigationPath>) {
+        self._path = path
+        self.product = product ?? ShoppingItem()
+    }
+    
     
     var body: some View {
         Form {
             Section("NOME DO PRODUTO") {
-                TextField("Escreva o nome do produto",text: $productName)
+                TextField("Escreva o nome do produto",text: $product.name)
             }
             
             Section("IMPOSTO DO ESTADO") {
-                TextField("Escreva o imposto do estado",value: $stateTax,formatter: NumberFormatter())
+                TextField("Escreva o imposto do estado",value: $product.taxState,formatter: NumberFormatter())
             }
             
             Section("VALOR DO PRODUTO") {
-                TextField("Escreva custo do produto",value: $productPrice,formatter: NumberFormatter())
+                TextField("Escreva custo do produto",value: $product.price,formatter: NumberFormatter())
             }
             
             Section("MEIO DE PAGAMENTO") {
-                Toggle("Pagou com cartão?", isOn: $isCreditCard)
+                Toggle("Pagou com cartão?", isOn: $product.isCreditCard)
             }
             
             Section("FOTO") {
@@ -61,8 +64,7 @@ struct ShoppingFormView: View {
         .navigationTitle("Cadastro de produto")
         
         Button {
-            var item = ShoppingItem(name: productName, taxState: stateTax, price: productPrice, isCreditCard: isCreditCard, image: Data())
-            modelContext.insert(item)
+            modelContext.insert(product)
                 
             path.removeLast()
         } label: {
@@ -75,5 +77,5 @@ struct ShoppingFormView: View {
 }
 
 #Preview {
-    ShoppingFormView(path: .constant(.init()))
+    ShoppingFormView(product: .init(), path: .init(projectedValue: .constant(.init())))
 }
