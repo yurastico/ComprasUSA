@@ -9,6 +9,7 @@ import SwiftUI
 import PhotosUI
 struct ShoppingFormView: View {
     @Binding var path: NavigationPath
+    @Environment(\.modelContext) var modelContext
     @State private var productName = ""
     @State private var stateTax = 0.0
     @State private var productPrice = 0.0
@@ -44,6 +45,8 @@ struct ShoppingFormView: View {
         
         Button {
             var item = ShoppingItem(name: productName, taxState: stateTax, price: productPrice, isCreditCard: isCreditCard, image: Data())
+            modelContext.insert(item)
+                
             path.removeLast()
         } label: {
             Text("Cadastrar")

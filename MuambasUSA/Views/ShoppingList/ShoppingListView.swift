@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
-
+import SwiftData
 enum NavigationType: Hashable {
     case form
 }
 
 struct ShoppingListView: View {
-    let shoppingItems = [String]()
+    @Query private var shoppingItems: [ShoppingItem]
     @State private var path = NavigationPath()
+    
     var body: some View {
         NavigationStack(path: $path) {
             Group {
@@ -25,8 +26,8 @@ struct ShoppingListView: View {
                         
                 } else {
                     List {
-                        ForEach(shoppingItems,id: \.self) { item in
-                            Text(item)
+                        ForEach(shoppingItems) { item in
+                            Text(item.name)
                         }
                         .onDelete(perform: deleteItem)
                     }
