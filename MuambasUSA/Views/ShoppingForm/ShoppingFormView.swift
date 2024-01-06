@@ -14,7 +14,9 @@ struct ShoppingFormView: View {
     @State private var stateTax = 0.0
     @State private var productPrice = 0.0
     @State private var isCreditCard = false
-    @State private var prouctImage: PhotosPickerItem? = nil
+    @State private var selectedProductImage: PhotosPickerItem?
+    @State private var productImageData: Data?
+    
     var body: some View {
         Form {
             Section("NOME DO PRODUTO") {
@@ -34,12 +36,27 @@ struct ShoppingFormView: View {
             }
             
             Section("FOTO") {
-                PhotosPicker(selection: $prouctImage) {
+                PhotosPicker(selection: $selectedProductImage) {
                     Label("Escolher foto", systemImage: "giftcard.fill")
                 }
-               
+                .onChange(of: selectedProductImage) {
+                    Task {
+                        productImageData = try? await selectedProductImage?.loadTransferable(type: Data.self)
+                    
+                        
+                    }
+                    
+                }
+                
+                if let productImageData,
+                    let uiImage = UIImage(data: productImageData){
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                }
             }
-            
         }
         .navigationTitle("Cadastro de produto")
         
