@@ -45,6 +45,7 @@ struct ShoppingFormView: View {
                 .onChange(of: selectedProductImage) {
                     Task {
                         productImageData = try? await selectedProductImage?.loadTransferable(type: Data.self)
+                        product.image = productImageData
                     
                         
                     }

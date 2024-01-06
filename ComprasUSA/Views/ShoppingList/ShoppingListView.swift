@@ -27,7 +27,7 @@ struct ShoppingListView: View {
                 } else {
                     List {
                         ForEach(shoppingItems) { item in
-                            Text(item.name)
+                            ShoppingListRow(product: item)
                         }
                         .onDelete(perform: deleteItem)
                     }
