@@ -1,6 +1,6 @@
 //
 //  ShoppingItem.swift
-//  MuambasUSA
+//  ComprasUSA
 //
 //  Created by Yuri Cunha on 20/12/23.
 //

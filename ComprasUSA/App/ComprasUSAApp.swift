@@ -1,6 +1,6 @@
 //
-//  MuambasUSAApp.swift
-//  MuambasUSA
+//  ComprasUSAApp.swift
+//  ComprasUSA
 //
 //  Created by Yuri Cunha on 15/12/23.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 @main
-struct MuambasUSAApp: App {
+struct ComprasUSAApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()

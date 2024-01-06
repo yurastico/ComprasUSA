@@ -1,6 +1,6 @@
 //
 //  TotalPurchaseView.swift
-//  MuambasUSA
+//  ComprasUSA
 //
 //  Created by Yuri Cunha on 15/12/23.
 //

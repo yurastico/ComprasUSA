@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A99007092B33CBE400F557D4 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99007082B33CBE400F557D4 /* ShoppingItem.swift */; };
-		C5233D952B2C246B00130218 /* MuambasUSAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233D942B2C246B00130218 /* MuambasUSAApp.swift */; };
+		C5233D952B2C246B00130218 /* ComprasUSAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233D942B2C246B00130218 /* ComprasUSAApp.swift */; };
 		C5233D972B2C246B00130218 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5233D962B2C246B00130218 /* MainTabView.swift */; };
 		C5233D992B2C246D00130218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5233D982B2C246D00130218 /* Assets.xcassets */; };
 		C5233D9C2B2C246D00130218 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5233D9B2B2C246D00130218 /* Preview Assets.xcassets */; };
@@ -20,8 +20,8 @@
 
 /* Begin PBXFileReference section */
 		A99007082B33CBE400F557D4 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
-		C5233D912B2C246B00130218 /* MuambasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuambasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5233D942B2C246B00130218 /* MuambasUSAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuambasUSAApp.swift; sourceTree = "<group>"; };
+		C5233D912B2C246B00130218 /* ComprasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComprasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5233D942B2C246B00130218 /* ComprasUSAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasUSAApp.swift; sourceTree = "<group>"; };
 		C5233D962B2C246B00130218 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C5233D982B2C246D00130218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5233D9B2B2C246D00130218 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		C5233D882B2C246B00130218 = {
 			isa = PBXGroup;
 			children = (
-				C5233D932B2C246B00130218 /* MuambasUSA */,
+				C5233D932B2C246B00130218 /* ComprasUSA */,
 				C5233D922B2C246B00130218 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,12 +61,12 @@
 		C5233D922B2C246B00130218 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C5233D912B2C246B00130218 /* MuambasUSA.app */,
+				C5233D912B2C246B00130218 /* ComprasUSA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C5233D932B2C246B00130218 /* MuambasUSA */ = {
+		C5233D932B2C246B00130218 /* ComprasUSA */ = {
 			isa = PBXGroup;
 			children = (
 				A99007072B33CBD800F557D4 /* Models */,
@@ -75,7 +75,7 @@
 				C5233D9A2B2C246D00130218 /* Preview Content */,
 				C5233D982B2C246D00130218 /* Assets.xcassets */,
 			);
-			path = MuambasUSA;
+			path = ComprasUSA;
 			sourceTree = "<group>";
 		};
 		C5233D9A2B2C246D00130218 /* Preview Content */ = {
@@ -101,7 +101,7 @@
 		C5233DA32B2C2BC900130218 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C5233D942B2C246B00130218 /* MuambasUSAApp.swift */,
+				C5233D942B2C246B00130218 /* ComprasUSAApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -149,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C5233D902B2C246B00130218 /* MuambasUSA */ = {
+		C5233D902B2C246B00130218 /* ComprasUSA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C5233D9F2B2C246D00130218 /* Build configuration list for PBXNativeTarget "MuambasUSA" */;
+			buildConfigurationList = C5233D9F2B2C246D00130218 /* Build configuration list for PBXNativeTarget "ComprasUSA" */;
 			buildPhases = (
 				C5233D8D2B2C246B00130218 /* Sources */,
 				C5233D8E2B2C246B00130218 /* Frameworks */,
@@ -161,9 +161,9 @@
 			);
 			dependencies = (
 			);
-			name = MuambasUSA;
+			name = ComprasUSA;
 			productName = MuambasUSA;
-			productReference = C5233D912B2C246B00130218 /* MuambasUSA.app */;
+			productReference = C5233D912B2C246B00130218 /* ComprasUSA.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C5233D8C2B2C246B00130218 /* Build configuration list for PBXProject "MuambasUSA" */;
+			buildConfigurationList = C5233D8C2B2C246B00130218 /* Build configuration list for PBXProject "ComprasUSA" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -194,7 +194,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C5233D902B2C246B00130218 /* MuambasUSA */,
+				C5233D902B2C246B00130218 /* ComprasUSA */,
 			);
 		};
 /* End PBXProject section */
@@ -222,7 +222,7 @@
 				C5233DA52B2C2C4400130218 /* ShoppingListView.swift in Sources */,
 				A99007092B33CBE400F557D4 /* ShoppingItem.swift in Sources */,
 				C5233D972B2C246B00130218 /* MainTabView.swift in Sources */,
-				C5233D952B2C246B00130218 /* MuambasUSAApp.swift in Sources */,
+				C5233D952B2C246B00130218 /* ComprasUSAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MuambasUSA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ComprasUSA/Preview Content\"";
 				DEVELOPMENT_TEAM = DWNX563SG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -387,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MuambasUSA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ComprasUSA/Preview Content\"";
 				DEVELOPMENT_TEAM = DWNX563SG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -415,7 +415,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C5233D8C2B2C246B00130218 /* Build configuration list for PBXProject "MuambasUSA" */ = {
+		C5233D8C2B2C246B00130218 /* Build configuration list for PBXProject "ComprasUSA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5233D9D2B2C246D00130218 /* Debug */,
@@ -424,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C5233D9F2B2C246D00130218 /* Build configuration list for PBXNativeTarget "MuambasUSA" */ = {
+		C5233D9F2B2C246D00130218 /* Build configuration list for PBXNativeTarget "ComprasUSA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5233DA02B2C246D00130218 /* Debug */,
