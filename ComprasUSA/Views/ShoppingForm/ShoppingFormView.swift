@@ -46,12 +46,8 @@ struct ShoppingFormView: View {
                     Task {
                         productImageData = try? await selectedProductImage?.loadTransferable(type: Data.self)
                         product.image = productImageData
-                    
-                        
                     }
-                    
                 }
-                
                 if let productImageData,
                     let uiImage = UIImage(data: productImageData){
                     Image(uiImage: uiImage)
