@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 enum NavigationType: Hashable {
     case form
+    case edit(ShoppingItem)
 }
 
 struct ShoppingListView: View {
@@ -28,7 +29,11 @@ struct ShoppingListView: View {
                 } else {
                     List {
                         ForEach(shoppingItems) { item in
-                            ShoppingListRow(product: item)
+                            NavigationLink(value: NavigationType.edit(item)) {
+                                ShoppingListRow(product: item)
+                            }
+                          
+
                         }
                         .onDelete(perform: deleteItem)
                     }
@@ -39,6 +44,8 @@ struct ShoppingListView: View {
                 switch type {
                 case .form:
                     ShoppingFormView(path: $path)
+                case .edit(let item):
+                    ShoppingFormView(product: item, path: $path)
                 }
             }
             .toolbar {
