@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
-    @State private var dollar = 0.0
-    @State private var iof = 0.0
+    @AppStorage("dollar")
+    private var dollar = 0.0
+    @AppStorage("IOF")
+    private var iof = 0.0
     var body: some View {
         NavigationStack {
             Form {
                 Section("Cotação do dólar (R$)") {
                     TextField("R$ 0.0",value: $dollar, formatter: NumberFormatter())
+                        .keyboardType(.numberPad)
                 }
                 
                 Section("IOF (%)") {
                     TextField("0.0",value: $iof, formatter: NumberFormatter())
+                        .keyboardType(.numberPad)
                 }
             }
             .navigationTitle("Ajustes")
