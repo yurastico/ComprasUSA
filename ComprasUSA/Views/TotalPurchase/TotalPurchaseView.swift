@@ -21,8 +21,8 @@ struct TotalPurchaseView: View {
             var taxitem = item.price + item.price * (item.taxState / 100)
             if item.isCreditCard {
                 taxitem = taxitem + taxitem * (iof / 100)
-                total = taxitem
-            } 
+                total += taxitem
+            }
         }
         return total
     }
