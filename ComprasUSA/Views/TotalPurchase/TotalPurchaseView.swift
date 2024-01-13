@@ -6,14 +6,32 @@
 //
 
 import SwiftUI
-
+import SwiftData
 struct TotalPurchaseView: View {
+    @AppStorage("IOF") var iof: Double = 0.0
+    @Query private var shoppingItems: [ShoppingItem]
+    var totalPurchase: Double {
+        shoppingItems.reduce(0) { $0 + $1.price }
+        
+    }
+    
+    var totalWithTaxes: Double {
+        return shoppingItems.reduce(into: 0) { result,item in
+            result = result + (item.price * (item.taxState / 100))
+            if item.isCreditCard {
+                result = result * (iof / 100)
+            }
+            
+        }
+       
+    }
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 32) {
                 VStack(alignment: .leading) {
                     Text("Valor dos produtos ($)")
-                    Text("$ 1,168.00")
+                    Text("\(totalPurchase)")
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(.blue)
