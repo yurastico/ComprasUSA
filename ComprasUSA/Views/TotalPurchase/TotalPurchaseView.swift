@@ -16,12 +16,15 @@ struct TotalPurchaseView: View {
     }
     
     var totalWithTaxes: Double {
-        
-        return shoppingItems.reduce(0) { result,item in
-            result + ((item.price * (item.taxState)) * item.isCreditCard ? (iof / 100) : 1
-            
+        var total: Double = 0
+        for item in shoppingItems {
+            var taxitem = item.price + item.price * (item.taxState / 100)
+            if item.isCreditCard {
+                taxitem = taxitem + taxitem * (iof / 100)
+                total = taxitem
+            } 
         }
-        
+        return total
     }
     
     var purchaseInReals: Double {
