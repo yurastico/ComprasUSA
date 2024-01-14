@@ -13,6 +13,7 @@ struct TotalPurchaseView: View {
     @Query private var shoppingItems: [ShoppingItem]
     var totalPurchase: Double {
         shoppingItems.reduce(0) { $0 + $1.price }
+        
     }
     
     var totalWithTaxes: Double {

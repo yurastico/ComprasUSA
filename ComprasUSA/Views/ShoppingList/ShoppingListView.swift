@@ -15,7 +15,7 @@ enum NavigationType: Hashable {
 struct ShoppingListView: View {
     @Query private var shoppingItems: [ShoppingItem]
     @State private var path = NavigationPath()
-    @Environment(\.modelContext) var modelContext
+
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -61,9 +61,7 @@ struct ShoppingListView: View {
         
     }
     private func deleteItem(at offsets: IndexSet) {
-        for index in offsets {
-            modelContext.delete(shoppingItems[index])
-        }
+        
         
     }
 }
