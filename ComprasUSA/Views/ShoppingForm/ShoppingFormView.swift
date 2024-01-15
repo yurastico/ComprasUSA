@@ -40,28 +40,37 @@ struct ShoppingFormView: View {
                 Toggle("Pagou com cartão?", isOn: $product.isCreditCard)
             }
             
-            Section("FOTO") {
-                PhotosPicker(selection: $selectedProductImage) {
-                    Label("Escolher foto", systemImage: "giftcard.fill")
-                }
-                .onChange(of: selectedProductImage) {
-                    Task {
-                        productImageData = try? await selectedProductImage?.loadTransferable(type: Data.self)
-                        product.image = productImageData
-                    }
-                }
-                if let productImageData,
-                    let uiImage = UIImage(data: productImageData){
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 200)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                }
-            }
+            imagePicker
+            
+            
         }
         .navigationTitle("Cadastro de produto")
         
+        saveButton
+    }
+    
+    var imagePicker: some View {
+        Section("FOTO") {
+            PhotosPicker(selection: $selectedProductImage) {
+                Label("Escolher foto", systemImage: "giftcard.fill")
+            }
+            .onChange(of: selectedProductImage) {
+                Task {
+                    productImageData = try? await selectedProductImage?.loadTransferable(type: Data.self)
+                    product.image = productImageData
+                }
+            }
+            if let productImageData,
+                let uiImage = UIImage(data: productImageData){
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 200)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+            }
+        }
+    }
+    var saveButton: some View {
         Button {
             modelContext.insert(product)
                 

@@ -15,7 +15,7 @@ enum NavigationType: Hashable {
 struct ShoppingListView: View {
     @Query private var shoppingItems: [ShoppingItem]
     @State private var path = NavigationPath()
-
+    
     
     var body: some View {
         NavigationStack(path: $path) {
