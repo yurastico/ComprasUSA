@@ -73,7 +73,6 @@ struct ShoppingFormView: View {
     var saveButton: some View {
         Button {
             modelContext.insert(product)
-                
             path.removeLast()
         } label: {
             Text("Cadastrar")
