@@ -41,6 +41,9 @@ struct TotalPurchaseView: View {
             .navigationTitle("Resumo da compra")
             Spacer()
         }
+        .onAppear {
+            viewModel.updateSummary()
+        }
     }
 }
 

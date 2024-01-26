@@ -8,14 +8,21 @@
 import Foundation
 import SwiftData
 import SwiftUI
-struct TotalPurchaseViewModel {
-    @AppStorage("IOF") var iof: Double = 0.0
-    @AppStorage("dollar") var dollar: Double = 0.0
-    @Query var shoppingItems: [ShoppingItem]
+import Observation
+
+@Observable
+final class TotalPurchaseViewModel {
+    private var dollar: Double = 0
+    private var iof: Double = 0
+    
+    var shoppingItems: [ShoppingItem]
+    
+    init(dataSource: ShoppingItemsDataSource = ShoppingItemsDataSource.shared) {
+        self.shoppingItems = dataSource.fetchItems()
+    }
     
     var totalPurchase: Double {
-        shoppingItems.reduce(0) { $0 + $1.price }
-        
+        return shoppingItems.reduce(0) { $0 + $1.price }
     }
     
     var totalWithTaxes: Double {
@@ -34,5 +41,11 @@ struct TotalPurchaseViewModel {
         return totalWithTaxes * dollar
     }
     
+    
+    func updateSummary() {
+        iof = UserSettings.iof.wrappedValue
+        dollar = UserSettings.dollar.wrappedValue
+        
+    }
     
 }

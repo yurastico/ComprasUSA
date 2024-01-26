@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+enum UserSettings {
+    static let iof = AppStorage(wrappedValue: 0.0, "IOF")
+    static let dollar = AppStorage(wrappedValue: 0.0, "dollar")
+}
+
 struct SettingsView: View {
     @AppStorage("dollar")
     private var dollar = 0.0
