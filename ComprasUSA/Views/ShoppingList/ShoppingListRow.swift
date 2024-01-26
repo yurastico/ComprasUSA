@@ -23,7 +23,7 @@ struct ShoppingListRow: View {
             }
             
             Text("\(product.name)")
-            Text("\(product.price)")
+            Text("\(product.price.currencyUSD)")
            
         }
     }
@@ -32,3 +32,5 @@ struct ShoppingListRow: View {
 #Preview {
     ShoppingListRow(product: ShoppingItem())
 }
+
+

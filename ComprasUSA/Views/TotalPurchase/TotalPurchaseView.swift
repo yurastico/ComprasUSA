@@ -13,7 +13,7 @@ struct TotalPurchaseView: View {
             VStack(alignment: .leading, spacing: 32) {
                 VStack(alignment: .leading) {
                     Text("Valor dos produtos ($)")
-                    Text("\(viewModel.totalPurchase)")
+                    Text("\(viewModel.totalPurchase.currencyUSD)")
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(.blue)
@@ -22,14 +22,14 @@ struct TotalPurchaseView: View {
                 VStack(alignment: .leading) {
                     Text("Total com impostos ($)")
                     
-                    Text("\(viewModel.totalWithTaxes)")
+                    Text("\(viewModel.totalWithTaxes.currencyUSD)")
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(.red)
                 }
                 VStack(alignment: .leading) {
                     Text("Valor final em reais")
-                    Text("\(viewModel.purchaseInReals)")
+                    Text("\(viewModel.purchaseInReals.currencyBRL)")
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(.green)

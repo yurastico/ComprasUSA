@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90DBED82B63DB4700349EC8 /* Decimal+currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90DBED72B63DB4700349EC8 /* Decimal+currency.swift */; };
 		A97086BE2B49E90D0074E554 /* ShoppingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97086BC2B49E69A0074E554 /* ShoppingListRow.swift */; };
 		A99007092B33CBE400F557D4 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99007082B33CBE400F557D4 /* ShoppingItem.swift */; };
 		A99A88C12B549421000D4564 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A88C02B549421000D4564 /* ShoppingListViewModel.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A90DBED72B63DB4700349EC8 /* Decimal+currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+currency.swift"; sourceTree = "<group>"; };
 		A97086BC2B49E69A0074E554 /* ShoppingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListRow.swift; sourceTree = "<group>"; };
 		A99007082B33CBE400F557D4 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		A99A88C02B549421000D4564 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A90DBED62B63DB2E00349EC8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A90DBED72B63DB4700349EC8 /* Decimal+currency.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A99007072B33CBD800F557D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		C5233D932B2C246B00130218 /* ComprasUSA */ = {
 			isa = PBXGroup;
 			children = (
+				A90DBED62B63DB2E00349EC8 /* Extension */,
 				A99A88BF2B549410000D4564 /* ViewModels */,
 				A99007072B33CBD800F557D4 /* Models */,
 				C5233DA32B2C2BC900130218 /* App */,
@@ -240,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5233DAE2B2C37C100130218 /* SettingsView.swift in Sources */,
+				A90DBED82B63DB4700349EC8 /* Decimal+currency.swift in Sources */,
 				C5233DA72B2C2C5E00130218 /* ShoppingFormView.swift in Sources */,
 				A9ABE4D92B63555400A2FDE7 /* ShoppingFormViewModel.swift in Sources */,
 				C5233DB12B2C3D9300130218 /* TotalPurchaseView.swift in Sources */,

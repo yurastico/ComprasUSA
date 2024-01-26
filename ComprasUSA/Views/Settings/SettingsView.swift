@@ -13,10 +13,8 @@ enum UserSettings {
 }
 
 struct SettingsView: View {
-    @AppStorage("dollar")
-    private var dollar = 0.0
-    @AppStorage("IOF")
-    private var iof = 0.0
+    @AppStorage("dollar") private var dollar: Double = 0.0
+    @AppStorage("IOF") private var iof: Double = 0.0
     var body: some View {
         NavigationStack {
             Form {
@@ -38,3 +36,6 @@ struct SettingsView: View {
 #Preview {
     SettingsView()
 }
+
+
+

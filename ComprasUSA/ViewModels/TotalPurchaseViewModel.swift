@@ -7,11 +7,11 @@
 
 import SwiftData
 import Observation
-
+import Foundation
 @Observable
 final class TotalPurchaseViewModel {
-    private var dollar: Double = 0
-    private var iof: Double = 0
+    private var dollar: Decimal = 0
+    private var iof: Decimal = 0
     
     var shoppingItems: [ShoppingItem]
     
@@ -19,14 +19,14 @@ final class TotalPurchaseViewModel {
         self.shoppingItems = dataSource.fetchItems()
     }
     
-    var totalPurchase: Double {
+    var totalPurchase: Decimal {
         return shoppingItems.reduce(0) { $0 + $1.price }
     }
     
-    var totalWithTaxes: Double {
-        var total: Double = 0
+    var totalWithTaxes: Decimal {
+        var total: Decimal = 0
         for item in shoppingItems {
-            var taxitem = item.price + item.price * (item.taxState / 100)
+            var taxitem: Decimal = item.price + item.price * (item.taxState / 100)
             if item.isCreditCard {
                 taxitem = taxitem + taxitem * (iof / 100)
                 total += taxitem
@@ -35,14 +35,14 @@ final class TotalPurchaseViewModel {
         return total
     }
     
-    var purchaseInReals: Double {
+    var purchaseInReals: Decimal {
         return totalWithTaxes * dollar
     }
     
     
     func updateSummary() {
-        iof = UserSettings.iof.wrappedValue
-        dollar = UserSettings.dollar.wrappedValue
+        iof = Decimal(UserSettings.iof.wrappedValue)
+        dollar = Decimal(UserSettings.dollar.wrappedValue)
 
     }
     
