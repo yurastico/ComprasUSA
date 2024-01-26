@@ -9,13 +9,15 @@ import SwiftUI
 import PhotosUI
 struct ShoppingFormView: View {
     @Binding var path: NavigationPath
-    @Environment(\.modelContext) var modelContext
     @Bindable var product: ShoppingItem
     @State private var selectedProductImage: PhotosPickerItem?
     @State private var productImageData: Data?
+    var buttonLabel: String
+    private let viewModel = ShoppingFormViewModel()
     
     init(product: ShoppingItem? = nil,path: Binding<NavigationPath>) {
         self._path = path
+        buttonLabel = product == nil ? "Cadastrar" : "Editar"
         self.product = product ?? ShoppingItem()
     }
     
@@ -72,7 +74,7 @@ struct ShoppingFormView: View {
     }
     var saveButton: some View {
         Button {
-            modelContext.insert(product)
+            viewModel.saveItem(product)
             path.removeLast()
         } label: {
             Text("Cadastrar")

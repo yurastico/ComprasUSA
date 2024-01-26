@@ -5,9 +5,7 @@
 //  Created by Yuri Cunha on 25/01/24.
 //
 
-import Foundation
 import SwiftData
-import SwiftUI
 import Observation
 
 @Observable
@@ -45,7 +43,7 @@ final class TotalPurchaseViewModel {
     func updateSummary() {
         iof = UserSettings.iof.wrappedValue
         dollar = UserSettings.dollar.wrappedValue
-        
+
     }
     
 }
