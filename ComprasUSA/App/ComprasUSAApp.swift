@@ -12,7 +12,7 @@ struct ComprasUSAApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()         
-                .modelContainer(for: ShoppingItem.self)
+              
         }
         
 

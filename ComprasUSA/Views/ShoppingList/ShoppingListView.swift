@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import SwiftData
 enum NavigationType: Hashable {
     case form
     case edit(ShoppingItem)
@@ -58,7 +58,12 @@ struct ShoppingListView: View {
                         Image(systemName: "plus")
                     }
                 }
+                
             }
+            .onAppear {
+                viewModel.refreshItems()
+            }
+            
         }
         
     }

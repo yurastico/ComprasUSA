@@ -5,9 +5,11 @@
 //  Created by Yuri Cunha on 25/01/24.
 //
 
-import Foundation
-import SwiftData
 
+import SwiftData
+import Observation
+
+@Observable
 final class ShoppingItemsDataSource {
     private let modelContainer: ModelContainer
     private let modelContext: ModelContext
