@@ -6,36 +6,30 @@
 //
 
 import SwiftUI
-import SwiftData
 enum NavigationType: Hashable {
     case form
     case edit(ShoppingItem)
 }
 
 struct ShoppingListView: View {
-    @Query private var shoppingItems: [ShoppingItem]
     @State private var path = NavigationPath()
-    
-    
+    @State private var viewModel = ShoppingListViewModel()
     var body: some View {
         NavigationStack(path: $path) {
             Group {
-                if shoppingItems.isEmpty {
+                if viewModel.shoppingItems.isEmpty {
                     Text("Sua lista de compras está vazia")
                         .font(.title3)
                         .fontWeight(.medium)
                         .italic()
-                        
                 } else {
                     List {
-                        ForEach(shoppingItems) { item in
+                        ForEach(viewModel.shoppingItems) { item in
                             NavigationLink(value: NavigationType.edit(item)) {
                                 ShoppingListRow(product: item)
                             }
-                          
-
                         }
-                        .onDelete(perform: deleteItem)
+                        .onDelete(perform: viewModel.deleteItem)
                     }
                 }
             }
@@ -58,14 +52,8 @@ struct ShoppingListView: View {
                 }
             }
         }
-        
-    }
-    private func deleteItem(at offsets: IndexSet) {
-        
-        
     }
 }
-
 
 #Preview {
     ShoppingListView()

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftData
 struct TotalPurchaseView: View {
     private var viewModel = TotalPurchaseViewModel()
     var body: some View {
