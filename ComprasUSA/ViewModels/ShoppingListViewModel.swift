@@ -11,6 +11,7 @@ import Observation
 @Observable
 final class ShoppingListViewModel {
     var shoppingItems: [ShoppingItem] = []
+    @ObservationIgnored
     private let dataSource: ShoppingItemsDataSource
     init(dataSource: ShoppingItemsDataSource = ShoppingItemsDataSource.shared) {
         self.dataSource = dataSource
@@ -22,6 +23,11 @@ final class ShoppingListViewModel {
             dataSource.removeItem(shoppingItems[index])
         }
     }
+    
+    func refreshItems() {
+        self.shoppingItems = dataSource.fetchItems()
+    }
+
     
 }
 

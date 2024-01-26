@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 enum NavigationType: Hashable {
     case form
     case edit(ShoppingItem)
@@ -14,6 +15,13 @@ enum NavigationType: Hashable {
 struct ShoppingListView: View {
     @State private var path = NavigationPath()
     @State private var viewModel = ShoppingListViewModel()
+    
+    init(path: NavigationPath = NavigationPath(), viewModel: ShoppingListViewModel = ShoppingListViewModel()) {
+        self.path = path
+        self.viewModel = viewModel
+        viewModel.refreshItems()
+    }
+    
     var body: some View {
         NavigationStack(path: $path) {
             Group {
@@ -52,6 +60,7 @@ struct ShoppingListView: View {
                 }
             }
         }
+        
     }
 }
 

@@ -77,7 +77,7 @@ struct ShoppingFormView: View {
             viewModel.saveItem(product)
             path.removeLast()
         } label: {
-            Text("Cadastrar")
+            Text(buttonLabel)
                 .frame(maxWidth: .infinity,maxHeight: 30)
         }
         .buttonStyle(.borderedProminent)

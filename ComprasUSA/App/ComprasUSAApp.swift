@@ -11,8 +11,10 @@ import SwiftData
 struct ComprasUSAApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()                
+            MainTabView()         
+                .modelContainer(for: ShoppingItem.self)
         }
+        
 
     }
 }
