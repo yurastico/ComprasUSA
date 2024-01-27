@@ -54,12 +54,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A90DBED62B63DB2E00349EC8 /* Extension */ = {
+		A90DBED62B63DB2E00349EC8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				A90DBED72B63DB4700349EC8 /* Decimal+currency.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A99007072B33CBD800F557D4 /* Models */ = {
@@ -100,7 +100,7 @@
 		C5233D932B2C246B00130218 /* ComprasUSA */ = {
 			isa = PBXGroup;
 			children = (
-				A90DBED62B63DB2E00349EC8 /* Extension */,
+				A90DBED62B63DB2E00349EC8 /* Extensions */,
 				A99A88BF2B549410000D4564 /* ViewModels */,
 				A99007072B33CBD800F557D4 /* Models */,
 				C5233DA32B2C2BC900130218 /* App */,

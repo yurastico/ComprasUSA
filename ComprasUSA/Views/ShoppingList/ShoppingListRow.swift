@@ -23,6 +23,7 @@ struct ShoppingListRow: View {
             }
             
             Text("\(product.name)")
+            Spacer()
             Text("\(product.price.currencyUSD)")
            
         }
