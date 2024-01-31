@@ -74,8 +74,10 @@ struct ShoppingFormView: View {
     }
     var saveButton: some View {
         Button {
-            viewModel.saveItem(product)
-            path.removeLast()
+            let isFieldsValid = viewModel.saveItem(product)
+            if isFieldsValid {
+                path.removeLast()
+            }
         } label: {
             Text(buttonLabel)
                 .frame(maxWidth: .infinity,maxHeight: 30)
