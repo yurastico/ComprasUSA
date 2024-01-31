@@ -29,13 +29,13 @@ struct ShoppingFormView: View {
             }
             
             Section("IMPOSTO DO ESTADO") {
-                TextField("Escreva o imposto do estado",value: $product.taxState,formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
+                TextField("Escreva o imposto do estado",value: $product.taxState,format: .number)
+                    .keyboardType(.decimalPad)
             }
             
             Section("VALOR DO PRODUTO") {
-                TextField("Escreva custo do produto",value: $product.price,formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
+                TextField("Escreva custo do produto",value: $product.price,format: .number)
+                    .keyboardType(.decimalPad)
             }
             
             Section("MEIO DE PAGAMENTO") {

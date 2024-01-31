@@ -5,18 +5,24 @@
 //  Created by Yuri Cunha on 25/01/24.
 //
 
+import SwiftUI
 import SwiftData
 import Observation
 import Foundation
+
 @Observable
 final class TotalPurchaseViewModel {
-    private var dollar: Decimal = 0
-    private var iof: Decimal = 0
+    private var dollar: Decimal
+    private var iof: Decimal
     
     var shoppingItems: [ShoppingItem]
     
     init(dataSource: ShoppingItemsDataSource = ShoppingItemsDataSource.shared) {
         self.shoppingItems = dataSource.fetchItems()
+        
+        // tentativa de ler os valors do appstorage
+        self.dollar = Decimal(UserSettings.dollar.wrappedValue)
+        self.iof = Decimal(UserSettings.iof.wrappedValue)
     }
     
     var totalPurchase: Decimal {
