@@ -20,7 +20,7 @@ final class TotalPurchaseViewModel {
     init(dataSource: ShoppingItemsDataSource = ShoppingItemsDataSource.shared) {
         self.shoppingItems = dataSource.fetchItems()
         
-        // tentativa de ler os valors do appstorage
+        // tentativa de ler os valores do appstorage
         self.dollar = Decimal(UserSettings.dollar.wrappedValue)
         self.iof = Decimal(UserSettings.iof.wrappedValue)
     }
@@ -35,8 +35,8 @@ final class TotalPurchaseViewModel {
             var taxitem: Decimal = item.price + item.price * (item.taxState / 100)
             if item.isCreditCard {
                 taxitem = taxitem + taxitem * (iof / 100)
-                total += taxitem
             }
+            total += taxitem
         }
         return total
     }
