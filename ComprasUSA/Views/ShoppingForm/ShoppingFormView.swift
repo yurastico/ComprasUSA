@@ -29,13 +29,13 @@ struct ShoppingFormView: View {
             }
             
             Section("IMPOSTO DO ESTADO") {
-                TextField("Escreva o imposto do estado",value: $product.taxState,formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
+                TextField("Escreva o imposto do estado",value: $product.taxState,format: .number)
+                    .keyboardType(.decimalPad)
             }
             
             Section("VALOR DO PRODUTO") {
-                TextField("Escreva custo do produto",value: $product.price,formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
+                TextField("Escreva custo do produto",value: $product.price,format: .number)
+                    .keyboardType(.decimalPad)
             }
             
             Section("MEIO DE PAGAMENTO") {
@@ -74,8 +74,10 @@ struct ShoppingFormView: View {
     }
     var saveButton: some View {
         Button {
-            viewModel.saveItem(product)
-            path.removeLast()
+            let isFieldsValid = viewModel.saveItem(product)
+            if isFieldsValid {
+                path.removeLast()
+            }
         } label: {
             Text(buttonLabel)
                 .frame(maxWidth: .infinity,maxHeight: 30)
