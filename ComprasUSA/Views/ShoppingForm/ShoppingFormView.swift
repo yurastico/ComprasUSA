@@ -31,19 +31,34 @@ struct ShoppingFormView: View {
             } footer: {
                 isRequiredText(fieldText: product.name)
             }
-
+            
             
             Section {
                 TextField("Escreva o imposto do estado",value: $product.taxState,format: .number)
                     .keyboardType(.decimalPad)
             } header: {
                 Text("IMPOSTO DO ESTADO")
+            } footer: {
+                if isFieldEmpty &&
+                    product.taxState >= 0 {
+                    Text("Este campo é obrigatório!")
+                        .foregroundStyle(.red)
+                }
             }
             
-            Section("VALOR DO PRODUTO") {
+            Section {
                 TextField("Escreva custo do produto",value: $product.price,format: .number)
                     .keyboardType(.decimalPad)
+            } header: {
+                Text("VALOR DO PRODUTO")
             }
+        footer: {
+            if isFieldEmpty &&
+                product.price >= 0 {
+                Text("Este campo é obrigatório!")
+                    .foregroundStyle(.red)
+            }
+        }
             
             Section("MEIO DE PAGAMENTO") {
                 Toggle("Pagou com cartão?", isOn: $product.isCreditCard)
