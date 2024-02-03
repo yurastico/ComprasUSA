@@ -8,18 +8,18 @@
 import SwiftUI
 
 enum UserSettings {
-    static let iof = AppStorage(wrappedValue: 4.9, "IOF")
+    static let iof = AppStorage(wrappedValue: 0.049, "IOF")
     static let dollar = AppStorage(wrappedValue: 5.38, "dollar")
 }
 
 struct SettingsView: View {
-    @AppStorage("dollar") private var dollar: Double = 4.9
+    @AppStorage("dollar") private var dollar: Double = 0.049
     @AppStorage("IOF") private var iof: Double = 5.38
     var body: some View {
         NavigationStack {
             Form {
                 Section("Cotação do dólar (R$)") {
-                    TextField("R$ 0.0",value: $dollar, format: .number)
+                    TextField("R$ 0.0",value: $dollar, format: .percent)
                         .keyboardType(.decimalPad)
                 }
                 

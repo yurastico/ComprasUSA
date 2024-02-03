@@ -32,9 +32,9 @@ final class TotalPurchaseViewModel {
     var totalWithTaxes: Decimal {
         var total: Decimal = 0
         for item in shoppingItems {
-            var taxitem: Decimal = item.price + item.price * (item.taxState / 100)
+            var taxitem: Decimal = item.price + item.price * (item.taxState)
             if item.isCreditCard {
-                taxitem = taxitem + taxitem * (iof / 100)
+                taxitem = taxitem + taxitem * (iof)
             }
             total += taxitem
         }
