@@ -16,6 +16,8 @@ struct SettingsView: View {
     @AppStorage("dollar") private var dollar: Double = 0.049
     @AppStorage("IOF") private var iof: Double = 5.38
     @FocusState var isInputActive:Bool
+    
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -29,6 +31,8 @@ struct SettingsView: View {
                     TextField("0%",value: $iof, format: .percent)
                         .keyboardType(.decimalPad)
                         .focused($isInputActive)
+                        
+                        
                 }
             }
             .navigationTitle("Ajustes")

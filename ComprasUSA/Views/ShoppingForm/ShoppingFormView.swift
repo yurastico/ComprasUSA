@@ -9,10 +9,10 @@ import SwiftUI
 struct ShoppingFormView: View {
     @Binding var path: NavigationPath
     @Bindable var product: ShoppingItem
-    
     @State private var productImageData: Data?
     @State private var isFieldEmpty = false
     var buttonLabel: String
+    
     private let viewModel = ShoppingFormViewModel()
     
     init(product: ShoppingItem? = nil,path: Binding<NavigationPath>) {
@@ -37,6 +37,8 @@ struct ShoppingFormView: View {
             Section {
                 TextField("Escreva o imposto do estado",value: $product.taxState,format: .percent)
                     .keyboardType(.decimalPad)
+                    
+                    
             } header: {
                 Text("IMPOSTO DO ESTADO")
             } footer: {
@@ -95,7 +97,6 @@ struct ShoppingFormView: View {
             let isFieldsValid = viewModel.saveItem(product)
             if isFieldsValid {
                 path.removeLast()
-                
                 isFieldEmpty = false
             } else {
                 withAnimation {
