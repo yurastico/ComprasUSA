@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct TotalPurchaseView: View {
-    private var viewModel = TotalPurchaseViewModel()
+    @State private var viewModel = TotalPurchaseViewModel()
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 32) {

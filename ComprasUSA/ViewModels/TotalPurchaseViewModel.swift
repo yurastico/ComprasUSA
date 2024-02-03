@@ -49,7 +49,7 @@ final class TotalPurchaseViewModel {
     func updateSummary() {
         iof = Decimal(UserSettings.iof.wrappedValue)
         dollar = Decimal(UserSettings.dollar.wrappedValue)
-
+        shoppingItems = ShoppingItemsDataSource.shared.fetchItems()
     }
     
 }
