@@ -11,6 +11,7 @@ struct ShoppingFormView: View {
     @Bindable var product: ShoppingItem
     
     @State private var productImageData: Data?
+    @State private var isFieldEmpty = false
     var buttonLabel: String
     private let viewModel = ShoppingFormViewModel()
     
@@ -23,15 +24,20 @@ struct ShoppingFormView: View {
     
     var body: some View {
         Form {
-            Section("NOME DO PRODUTO") {
+            Section {
                 TextField("Escreva o nome do produto",text: $product.name)
+            } header: {
+                Text("NOME DO PRODUTO")
+            } footer: {
+                isRequiredText(fieldText: product.name)
             }
+
             
-            
-            
-            Section("IMPOSTO DO ESTADO") {
+            Section {
                 TextField("Escreva o imposto do estado",value: $product.taxState,format: .number)
                     .keyboardType(.decimalPad)
+            } header: {
+                Text("IMPOSTO DO ESTADO")
             }
             
             Section("VALOR DO PRODUTO") {
@@ -53,12 +59,19 @@ struct ShoppingFormView: View {
     }
     
     var imagePicker: some View {
-        Section("FOTO") {
+        Section {
             ItemImagePicker(productImageData: $product.image)
                 .onChange(of: productImageData) {
                     product.image = productImageData
                 }
-            
+        } header: {
+            Text("FOTO")
+        } footer: {
+            if isFieldEmpty &&
+                productImageData == nil {
+                Text("Este campo é obrigatório!")
+                    .foregroundStyle(.red)
+            }
         }
     }
     var saveButton: some View {
@@ -66,6 +79,12 @@ struct ShoppingFormView: View {
             let isFieldsValid = viewModel.saveItem(product)
             if isFieldsValid {
                 path.removeLast()
+                
+                isFieldEmpty = false
+            } else {
+                withAnimation {
+                    isFieldEmpty = true
+                }
             }
         } label: {
             Text(buttonLabel)
@@ -74,6 +93,17 @@ struct ShoppingFormView: View {
         .buttonStyle(.borderedProminent)
         .padding()
     }
+    
+    @ViewBuilder
+    func isRequiredText(fieldText: String) -> some View {
+        if isFieldEmpty &&
+            fieldText.isEmpty {
+            Text("Este campo é obrigatório!")
+                .foregroundStyle(.red)
+        }
+        
+    }
+    
 }
 
 #Preview {

@@ -20,9 +20,9 @@ struct ItemImagePicker: View {
                 Task {
                     productImageData = try? await selectedProductImage?.loadTransferable(type: Data.self)
                     if let productImageData,
-                        let uiImage = UIImage(data: productImageData){
+                       let uiImage = UIImage(data: productImageData){
                         image = Image(uiImage: uiImage)
-                            
+                        
                     }
                 }
             }
@@ -38,7 +38,7 @@ struct ItemImagePicker: View {
         }
         .onAppear {
             if let productImageData,
-                let uiImage = UIImage(data: productImageData) {
+               let uiImage = UIImage(data: productImageData) {
                 image = Image(uiImage: uiImage)
             }
         }

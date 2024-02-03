@@ -88,7 +88,6 @@
 		C5233D882B2C246B00130218 = {
 			isa = PBXGroup;
 			children = (
-				A96C0C0F2B6E9A2300019793 /* ItemImagePicker.swift */,
 				C5233D932B2C246B00130218 /* ComprasUSA */,
 				C5233D922B2C246B00130218 /* Products */,
 			);
@@ -156,6 +155,7 @@
 		C5233DA92B2C375E00130218 /* ShoppingForm */ = {
 			isa = PBXGroup;
 			children = (
+				A96C0C0F2B6E9A2300019793 /* ItemImagePicker.swift */,
 				C5233DA62B2C2C5E00130218 /* ShoppingFormView.swift */,
 			);
 			path = ShoppingForm;
