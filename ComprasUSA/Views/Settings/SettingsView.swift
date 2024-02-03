@@ -22,7 +22,7 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section("Cotação do dólar (R$)") {
-                    TextField("R$ 0.0",value: $dollar, format: .currency(code: "BRL"))
+                    TextField("R$ 0.0",value: $dollar, format: .number)
                         .keyboardType(.decimalPad)
                         .focused($isInputActive)
                 }

@@ -39,6 +39,7 @@ struct ShoppingFormView: View {
                     .keyboardType(.decimalPad)
                     
                     
+                    
             } header: {
                 Text("IMPOSTO DO ESTADO")
             } footer: {
@@ -50,7 +51,7 @@ struct ShoppingFormView: View {
             }
             
             Section {
-                TextField("Escreva custo do produto",value: $product.price,format: .currency(code: "USD"))
+                TextField("Escreva custo do produto",value: $product.price,format: .number)
                     .keyboardType(.decimalPad)
             } header: {
                 Text("VALOR DO PRODUTO")
