@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import PhotosUI
 struct ShoppingFormView: View {
     @Binding var path: NavigationPath
     @Bindable var product: ShoppingItem
-    @State private var selectedProductImage: PhotosPickerItem?
+    
     @State private var productImageData: Data?
     var buttonLabel: String
     private let viewModel = ShoppingFormViewModel()
@@ -27,6 +26,8 @@ struct ShoppingFormView: View {
             Section("NOME DO PRODUTO") {
                 TextField("Escreva o nome do produto",text: $product.name)
             }
+            
+            
             
             Section("IMPOSTO DO ESTADO") {
                 TextField("Escreva o imposto do estado",value: $product.taxState,format: .number)
@@ -53,23 +54,11 @@ struct ShoppingFormView: View {
     
     var imagePicker: some View {
         Section("FOTO") {
-            PhotosPicker(selection: $selectedProductImage) {
-                Label("Escolher foto", systemImage: "giftcard.fill")
-            }
-            .onChange(of: selectedProductImage) {
-                Task {
-                    productImageData = try? await selectedProductImage?.loadTransferable(type: Data.self)
+            ItemImagePicker(productImageData: $product.image)
+                .onChange(of: productImageData) {
                     product.image = productImageData
                 }
-            }
-            if let productImageData,
-                let uiImage = UIImage(data: productImageData){
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-            }
+            
         }
     }
     var saveButton: some View {
