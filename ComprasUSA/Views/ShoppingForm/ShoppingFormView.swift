@@ -40,7 +40,7 @@ struct ShoppingFormView: View {
                 Text("IMPOSTO DO ESTADO")
             } footer: {
                 if isFieldEmpty &&
-                    product.taxState >= 0 {
+                    product.taxState <= 0 {
                     Text("Este campo é obrigatório!")
                         .foregroundStyle(.red)
                 }
@@ -54,7 +54,7 @@ struct ShoppingFormView: View {
             }
         footer: {
             if isFieldEmpty &&
-                product.price >= 0 {
+                product.price <= 0 {
                 Text("Este campo é obrigatório!")
                     .foregroundStyle(.red)
             }
