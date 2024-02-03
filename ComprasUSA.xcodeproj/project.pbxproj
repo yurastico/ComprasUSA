@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A90DBED82B63DB4700349EC8 /* Decimal+currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90DBED72B63DB4700349EC8 /* Decimal+currency.swift */; };
+		A96C0C0C2B6E772600019793 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96C0C0B2B6E772600019793 /* Launch Screen.storyboard */; };
 		A97086BE2B49E90D0074E554 /* ShoppingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97086BC2B49E69A0074E554 /* ShoppingListRow.swift */; };
 		A99007092B33CBE400F557D4 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99007082B33CBE400F557D4 /* ShoppingItem.swift */; };
 		A99A88C12B549421000D4564 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A88C02B549421000D4564 /* ShoppingListViewModel.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		A90DBED72B63DB4700349EC8 /* Decimal+currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+currency.swift"; sourceTree = "<group>"; };
+		A96C0C0B2B6E772600019793 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A97086BC2B49E69A0074E554 /* ShoppingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListRow.swift; sourceTree = "<group>"; };
 		A99007082B33CBE400F557D4 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		A99A88C02B549421000D4564 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				C5233DA22B2C2BC200130218 /* Views */,
 				C5233D9A2B2C246D00130218 /* Preview Content */,
 				C5233D982B2C246D00130218 /* Assets.xcassets */,
+				A96C0C0B2B6E772600019793 /* Launch Screen.storyboard */,
 			);
 			path = ComprasUSA;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96C0C0C2B6E772600019793 /* Launch Screen.storyboard in Resources */,
 				C5233D9C2B2C246D00130218 /* Preview Assets.xcassets in Resources */,
 				C5233D992B2C246D00130218 /* Assets.xcassets in Resources */,
 			);
@@ -399,9 +403,11 @@
 				DEVELOPMENT_TEAM = DWNX563SG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ComprasUSA;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -431,9 +437,11 @@
 				DEVELOPMENT_TEAM = DWNX563SG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ComprasUSA;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
