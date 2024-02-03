@@ -22,13 +22,10 @@ final class ShoppingFormViewModel {
         let price = item.price
         let image = item.image
         
-        if name.isEmpty || taxState == 0.0 || price == 0.0 || image == nil {
+        if name.isEmpty || taxState <= 0.0 || price <= 0.0 || image == nil {
             return false
         }
         
-        if taxState.isNaN || price.isNaN  {
-            return false
-        }
         
         dataSource.addItem(for: item)
         return true
