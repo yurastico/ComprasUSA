@@ -8,13 +8,13 @@
 import SwiftUI
 
 enum UserSettings {
-    static let iof = AppStorage(wrappedValue: 0.049, "IOF")
-    static let dollar = AppStorage(wrappedValue: 5.38, "dollar")
+    static let iof = AppStorage(wrappedValue: 0.0538, "IOF")
+    static let dollar = AppStorage(wrappedValue: 4.90, "dollar")
 }
 
 struct SettingsView: View {
-    @AppStorage("dollar") private var dollar: Double = 0.049
-    @AppStorage("IOF") private var iof: Double = 5.38
+    @AppStorage("dollar") private var dollar: Double = 4.90
+    @AppStorage("IOF") private var iof: Double = 0.0538
     @FocusState var isInputActive:Bool
     
     
