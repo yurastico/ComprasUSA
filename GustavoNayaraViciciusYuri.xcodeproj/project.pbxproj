@@ -36,7 +36,7 @@
 		A9ABE4D42B63161800A2FDE7 /* TotalPurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPurchaseViewModel.swift; sourceTree = "<group>"; };
 		A9ABE4D62B63512300A2FDE7 /* ShoppingItemsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemsDataSource.swift; sourceTree = "<group>"; };
 		A9ABE4D82B63555400A2FDE7 /* ShoppingFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingFormViewModel.swift; sourceTree = "<group>"; };
-		C5233D912B2C246B00130218 /* ComprasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComprasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5233D912B2C246B00130218 /* GustavoNayaraViciciusYuri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GustavoNayaraViciciusYuri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5233D942B2C246B00130218 /* ComprasUSAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasUSAApp.swift; sourceTree = "<group>"; };
 		C5233D962B2C246B00130218 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C5233D982B2C246D00130218 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		C5233D882B2C246B00130218 = {
 			isa = PBXGroup;
 			children = (
-				C5233D932B2C246B00130218 /* ComprasUSA */,
+				C5233D932B2C246B00130218 /* GustavoNayaraViciciusYuri */,
 				C5233D922B2C246B00130218 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,12 +96,12 @@
 		C5233D922B2C246B00130218 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C5233D912B2C246B00130218 /* ComprasUSA.app */,
+				C5233D912B2C246B00130218 /* GustavoNayaraViciciusYuri.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C5233D932B2C246B00130218 /* ComprasUSA */ = {
+		C5233D932B2C246B00130218 /* GustavoNayaraViciciusYuri */ = {
 			isa = PBXGroup;
 			children = (
 				A90DBED62B63DB2E00349EC8 /* Extensions */,
@@ -113,7 +113,7 @@
 				C5233D982B2C246D00130218 /* Assets.xcassets */,
 				A96C0C0B2B6E772600019793 /* Launch Screen.storyboard */,
 			);
-			path = ComprasUSA;
+			path = GustavoNayaraViciciusYuri;
 			sourceTree = "<group>";
 		};
 		C5233D9A2B2C246D00130218 /* Preview Content */ = {
@@ -189,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C5233D902B2C246B00130218 /* ComprasUSA */ = {
+		C5233D902B2C246B00130218 /* GustavoNayaraViciciusYuri */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C5233D9F2B2C246D00130218 /* Build configuration list for PBXNativeTarget "ComprasUSA" */;
+			buildConfigurationList = C5233D9F2B2C246D00130218 /* Build configuration list for PBXNativeTarget "GustavoNayaraViciciusYuri" */;
 			buildPhases = (
 				C5233D8D2B2C246B00130218 /* Sources */,
 				C5233D8E2B2C246B00130218 /* Frameworks */,
@@ -201,9 +201,9 @@
 			);
 			dependencies = (
 			);
-			name = ComprasUSA;
+			name = GustavoNayaraViciciusYuri;
 			productName = MuambasUSA;
-			productReference = C5233D912B2C246B00130218 /* ComprasUSA.app */;
+			productReference = C5233D912B2C246B00130218 /* GustavoNayaraViciciusYuri.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C5233D8C2B2C246B00130218 /* Build configuration list for PBXProject "ComprasUSA" */;
+			buildConfigurationList = C5233D8C2B2C246B00130218 /* Build configuration list for PBXProject "GustavoNayaraViciciusYuri" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -234,7 +234,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C5233D902B2C246B00130218 /* ComprasUSA */,
+				C5233D902B2C246B00130218 /* GustavoNayaraViciciusYuri */,
 			);
 		};
 /* End PBXProject section */
@@ -403,7 +403,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ComprasUSA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GustavoNayaraViciciusYuri/Preview Content\"";
 				DEVELOPMENT_TEAM = DWNX563SG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -438,7 +438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ComprasUSA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GustavoNayaraViciciusYuri/Preview Content\"";
 				DEVELOPMENT_TEAM = DWNX563SG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -469,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C5233D8C2B2C246B00130218 /* Build configuration list for PBXProject "ComprasUSA" */ = {
+		C5233D8C2B2C246B00130218 /* Build configuration list for PBXProject "GustavoNayaraViciciusYuri" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5233D9D2B2C246D00130218 /* Debug */,
@@ -478,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C5233D9F2B2C246D00130218 /* Build configuration list for PBXNativeTarget "ComprasUSA" */ = {
+		C5233D9F2B2C246D00130218 /* Build configuration list for PBXNativeTarget "GustavoNayaraViciciusYuri" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5233DA02B2C246D00130218 /* Debug */,
