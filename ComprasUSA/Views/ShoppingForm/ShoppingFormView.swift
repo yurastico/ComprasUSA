@@ -26,6 +26,7 @@ struct ShoppingFormView: View {
         Form {
             Section {
                 TextField("Escreva o nome do produto",text: $product.name)
+                    
             } header: {
                 Text("NOME DO PRODUTO")
             } footer: {
@@ -34,7 +35,7 @@ struct ShoppingFormView: View {
             
             
             Section {
-                TextField("Escreva o imposto do estado",value: $product.taxState,format: .number)
+                TextField("Escreva o imposto do estado",value: $product.taxState,format: .percent)
                     .keyboardType(.decimalPad)
             } header: {
                 Text("IMPOSTO DO ESTADO")
@@ -47,7 +48,7 @@ struct ShoppingFormView: View {
             }
             
             Section {
-                TextField("Escreva custo do produto",value: $product.price,format: .number)
+                TextField("Escreva custo do produto",value: $product.price,format: .currency(code: "USD"))
                     .keyboardType(.decimalPad)
             } header: {
                 Text("VALOR DO PRODUTO")
